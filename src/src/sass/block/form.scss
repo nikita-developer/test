@@ -1,0 +1,194 @@
+
+.form {
+    .jq-file {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        background-color: #fff;
+    }
+
+    .jq-file__name {
+        position: relative;
+        width: auto;
+        height: 44px;
+        line-height: 1.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        padding-left: 25px;
+        outline: none;
+        box-shadow: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #272733;
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 18px;
+            height: 20px;
+            transform: translateY(-50%);
+            content: '';
+            background-image: url("../media/form/file.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    .jq-file__browse {
+        display: none;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    & + & {
+        margin-top: 30px;
+    }
+}
+
+.form__item {
+    flex-grow: 1;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 33.333%;
+
+    &_fullwidth {
+        max-width: 100%;
+    }
+
+    &_center {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.form__field {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #272733;
+    padding: 12px 15px;
+
+    &::-moz-placeholder {
+        color: #272733;
+    }
+
+    &::-webkit-input-placeholder {
+        color: #272733;
+    }
+}
+
+.form__select {
+    width: 100%;
+
+    .jq-selectbox__select {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #fff;
+        padding-left: 15px;
+        height: 47.59px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        text-shadow: none;
+    }
+
+    .jq-selectbox__trigger {
+        border: 0;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 0;
+        width: 9px;
+        height: 6px;
+        background-image: url("../media/form/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .jq-selectbox__select-text {
+        line-height: 1.2;
+        font-size: 18px;
+        color: #272733;
+        font-weight: 400;
+    }
+}
+
+.form__btn {
+    width: 100%;
+}
+
+.form__range {
+    width: 100%;
+}
+
+.form__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 13px;
+
+    span {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form__field {
+        font-size: 16px;
+    }
+
+    .form__select {
+        .jq-selectbox__select-text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .form__row {
+        flex-wrap: wrap;
+    }
+
+    .form__item {
+        width: 100%;
+        max-width: 100%;
+
+        & + & {
+            margin-top: 15px;
+        }
+    }
+
+    .form__row {
+        & + & {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .form__btn {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

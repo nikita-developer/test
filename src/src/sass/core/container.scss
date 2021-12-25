@@ -1,0 +1,43 @@
+
+.container {
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container_fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 768px;
+
+        &_fullWidth {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 480px;
+
+        &_fullWidth {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+
+        &_fullWidth {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #3D4050;
+}
+
+.footer__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__defender {
+    font-size: 13px;
+    color: #fff;
+
+    span {
+        text-transform: uppercase;
+    }
+}
+
+.footer__pay {
+    display: flex;
+    margin-right: 30px;
+    padding-right: 30px;
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+.footer__pay-item {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 10px;
+    }
+
+    span {
+        color: #C3C3C3;
+        font-size: 13px;
+    }
+
+    & + & {
+        margin-left: 35px;
+    }
+}
+
+.footer__contacts {
+    display: flex;
+}
+
+.footer__contacts-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+        margin-right: 10px;
+    }
+
+    span {
+        color: #fff;
+        font-size: 13px;
+    }
+
+    & + & {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer__body {
+        justify-content: center;
+    }
+
+    .footer__defender {
+        width: 100%;
+        order: 3;
+        text-align: center;
+        margin-top: 15px;
+        color: #C3C3C3;
+    }
+
+    .footer__pay {
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 15px;
+        margin-left: 35px;
+        padding-left: 0;
+        order: 2;
+    }
+
+    .footer__contacts {
+        order: 1;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__pay {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__defender {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__pay {
+        justify-content: space-between;
+    }
+
+    .footer__pay-item {
+        span {
+            font-size: 12px;
+        }
+
+        img {
+            margin-right: 5px;
+        }
+
+        & + & {
+            margin-left: 5px;
+        }
+    }
+}
